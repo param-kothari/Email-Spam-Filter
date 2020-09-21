@@ -9,9 +9,9 @@ combine = zip(all_emails, labels)
 start = time.time()
 feature_set = gen_features(combine)
 train_set, test_set, clf = train(feature_set, 0.8)
-print("Accuracy for Naive Bayes with NLTK : %0.2f%%" % (accuracy(test_set, clf) * 100))
 total = time.time() - start
 print("Time taken to generate features, train and predict : %0.3f s\n" % (total))
+print("\nAccuracy for Naive Bayes with NLTK : %0.2f%%\n" % (accuracy(test_set, clf) * 100))
 
 # Naive Bayes (sklearn) with Tf-Idf :
 start = time.time()
